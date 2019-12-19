@@ -7,6 +7,13 @@ import Form from "./components/form";
 export default function App() {
   const [team, setTeam] = useState([
     {
+      id:1,
+      name:'Nicole',
+      email: 'nicci498@gmail.com',
+      role: 'Front End',   
+      
+    },
+    {
       name: '', 
       email: '',
       role: ''
@@ -22,18 +29,12 @@ export default function App() {
     };
     setTeam([...team, newMember]);
   };
-    const teamO = [{
-    id:1,
-    name:'Nicole',
-    email: 'nicci498@gmail.com',
-    role: 'Front End',   
-    
-  }]
+ 
   return (
     <div className="App">
       <h1>My Team</h1>
       <Form addNewMember={addNewMember}  />
-      <Card teamMembers = {teamO}/>
+      <Card teamMembers = {team}/>
     </div>
   );}
 
