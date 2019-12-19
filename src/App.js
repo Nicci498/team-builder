@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import Card from './components/card';
+import Form from "./components/form";
 
 function App() {
   const team = [{
@@ -20,6 +22,8 @@ function App() {
   return (
     <div className="App">
 
+    <Card teamMembers = {team}/>
+    <Form />
     </div>
   );
 }

@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
 
-export default function Card(){
-    return(
+export default function Card(props) {
+  return (
+    <div>
+      {props.teamMembers.map(item => (
         <div>
-            <h2>{name}</h2>
-            <p>{email}</p>
-            <p>{role}</p>
+          <h2>{item.name}</h2>
+          <p>{item.email}</p>
+          <p>{item.role}</p>
         </div>
-    )
+      ))}
+    </div>
+  );
 }
